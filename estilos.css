@@ -126,7 +126,7 @@ button {
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    filter: saturate(150%);
+    filter: saturate(120%);
 }
 
 .textoPrincipal {
@@ -165,9 +165,69 @@ button {
     transition: transform 0.3s ease;
     transform: scale(1);
 }
+
 .icone:hover {
-  transform: scale(1.2); /
+    transform: scale(1.2);
 }
+
 .icone.diminuir:hover {
-  transform: scale(0.8);
+    transform: scale(0.8);
+}
+
+#projetos {
+    min-height: 1000px;
+}
+
+.tituloProjeto {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.2vw;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+}
+
+#projeto1 {
+    height: 400px;
+    position: relative;
+    left: 120px;
+    top: 200px;
+    border-radius: 10px;
+    border: #11111196 solid 2px;
+    filter: drop-shadow(0 0 1rem rgb(37, 37, 36));
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+#projeto1:hover {
+    transform: scale(1.05);
+}
+
+#projeto1.diminuir:hover {
+    transform: scale(2);
+}
+
+.nomeProjetos {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2vw;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+}
+#jornalistico{
+    margin: 50px;
+    position: relative;
+    right: 180px;
+    top: 200px;
+}
+#cadastro{
+    position: relative;
+    left: 300px;
+    top: 200px; 
+}
+#contatos{
+    height: 400px;
+    background-color: #145A82;
 }
