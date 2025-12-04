@@ -24,7 +24,7 @@ header {
     padding: 15px;
 }
 
-button {
+.navbar {
     background-color: black;
     color: white;
     border-radius: 8px;
@@ -38,12 +38,12 @@ button {
     margin: 0px 50px 0px 15px;
 }
 
-button:hover {
+.navbar:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px #ffffff;
 }
 
-button::before {
+.navbar::before {
     content: '';
     position: absolute;
     top: -50%;
@@ -59,16 +59,16 @@ button::before {
     opacity: 0;
 }
 
-button:hover::before {
+.navbar:hover::before {
     opacity: 1;
     transform: rotate(-45deg) translateY(100%);
 }
 
-button {
+.navbar {
     background: #000;
 }
 
-button {
+.navbar {
     background: #111;
     position: relative;
     overflow: hidden;
@@ -76,7 +76,7 @@ button {
     transition: all 0.5s ease;
 }
 
-button {
+.navbar {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     position: relative;
@@ -216,18 +216,145 @@ button {
     font-family: "Protest Riot", sans-serif;
     font-weight: 400;
 }
-#jornalistico{
+
+#jornalistico {
     margin: 50px;
     position: relative;
     right: 180px;
     top: 200px;
 }
-#cadastro{
+
+#cadastro {
     position: relative;
     left: 300px;
-    top: 200px; 
+    top: 200px;
 }
-#contatos{
-    height: 400px;
+
+/* FOOTER DO SITE*/
+#contatos {
+    height: 100px;
     background-color: #145A82;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+/* GITHUB */
+.btn-github {
+    cursor: pointer;
+    gap: 0.5rem;
+    border: none;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+.btn-github:hover {
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0),
+        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #000000;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* INSTAGRAM */
+.btn-instagram {
+    cursor: pointer;
+    gap: 0.5rem;
+    border: none;
+
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+.btn-instagram:hover {
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0),
+        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #cabe0f;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* LINKEDIN */
+.btn-linkedin {
+    cursor: pointer;
+    gap: 0.5rem;
+    border: none;
+
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+.btn-linkedin:hover {
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0),
+        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #0051ff;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* GMAIL */
+.btn-gmail {
+    cursor: pointer;
+    gap: 0.5rem;
+    border: none;
+
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border-radius: 100px;
+    font-weight: 800;
+
+
+    padding: 0.75rem 1rem;
+    font-size: 0.825rem;
+    line-height: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    color: #fff;
+}
+
+.btn-gmail:hover {
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0),
+        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
+    color: #ff0000;
+    transform: translate(0, -0.25rem);
+    background-color: rgba(0, 0, 0, 0.5);
 }
