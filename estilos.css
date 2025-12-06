@@ -3,41 +3,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Knewave&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
 
-
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* HEADER */
 header {
     background-color: #145A82;
-    margin: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
 }
 
-/*ESTILIZAÇÃO DO H1 PRINCIPAL (PEDRO MARQUES)*/
 .autor {
-    font-size: 30px;
+    font-size: 2rem;
     font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 15px;
 }
 
 .navbar {
-    background-color: black;
+    background: #111;
     color: white;
-    border-radius: 8px;
-    width: 125px;
-    height: 25px;
-    font-size: 20px;
+    border-radius: 50%;
+    padding: 0.4rem 1rem;
+    font-size: 1.2rem;
     font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-    font-style: normal;
     cursor: pointer;
-    margin: 0px 50px 0px 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    margin-left: 10px;
 }
 
 .navbar:hover {
@@ -52,10 +49,7 @@ header {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(0deg,
-            transparent,
-            transparent 30%,
-            #ffffff);
+    background: linear-gradient(0deg, transparent, transparent 30%, #ffffff);
     transform: rotate(-45deg);
     transition: all 0.3s ease;
     opacity: 0;
@@ -66,23 +60,15 @@ header {
     transform: rotate(-45deg) translateY(100%);
 }
 
-.navbar {
-    background: #000;
-}
 
-.navbar {
-    background: #111;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    transition: all 0.5s ease;
-}
-
-.navbar {
-    color: rgb(255, 255, 255);
-    font-size: 1.2rem;
-    position: relative;
-    z-index: 2;
+/* HOME */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 700px;
+    flex-wrap: wrap; 
+    padding: 50px;   
 }
 
 .fraseApresentativa {
@@ -90,114 +76,114 @@ header {
     font-weight: 400;
     font-style: normal;
     font-size: 2vw;
-    position: relative;
-    top: 250px;
-    position: relative;
-    left: 150px;
-    max-width: 700px;
+    max-width: 600px; 
 }
 
-@media (max-width: 1200px) {
-    header {
-        width: 200%;
+.imagemPrincipal {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%; 
+    object-fit: cover;
+    filter: saturate(120%);
+    margin-left: auto;  
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
     }
 
-    button {
-        font-size: 1.5rem;
-        width: 125px;
-        height: 35px;
-        margin: 0px 25px 0px 55px;
+    .imagemPrincipal {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 250px;
+        height: 250px;
     }
 
     .fraseApresentativa {
         font-size: 4vw;
+        max-width: 100%;
     }
 }
 
-#home {
-    display: flex;
-    justify-content: space-between;
-    min-height: 700px;
-}
-
-.imagemPrincipal {
-    position: relative;
-    right: 60%;
-    top: 25%;
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    filter: saturate(120%);
-}
-
-.textoPrincipal {
-    border-radius: 8px;
-    height: 1100px;
-    width: 1000px;
-    color: black;
-    font-size: 28px;
-    position: absolute;
-    top: 1600px;
-    padding: 15px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "TikTok Sans", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-}
-
+/* SOBRE */
 #sobre {
-    min-height: 1500px;
     background-color: #145A82;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
 }
 
+/* SOBRE */
 .icones {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 150px; 
 }
 
 .icone {
-    margin: 20px 85px 25px 85px;
-    padding: 15px;
-    position: relative;
-    top: 50px;
     width: 100px;
     transition: transform 0.3s ease;
-    transform: scale(1);
 }
 
 .icone:hover {
     transform: scale(1.2);
 }
 
-.icone.diminuir:hover {
-    transform: scale(0.8);
+.textoPrincipal {
+    background: rgba(255,255,255,0.8);
+    border-radius: 8px;
+    padding: 20px;
+    font-family: "TikTok Sans", sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+    color: black;
+    max-width: 1000px;
 }
 
+/* PROJETOS */
 #projetos {
-    min-height: 1000px;
+    padding: 50px 20px;
 }
 
 .tituloProjeto {
     text-align: center;
-    margin-top: 30px;
-    font-size: 2.2vw;
     font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.nomeProjetos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-family: "Protest Riot", sans-serif;
+    margin: 30px 0;
+}
+
+#jornalistico, #cadastro {
+    text-align: center;
+}
+
+.imagemProjeto {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
 #projeto1 {
-    height: 400px;
-    position: relative;
-    left: 120px;
-    top: 200px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 10px;
     border: #11111196 solid 2px;
     filter: drop-shadow(0 0 1rem rgb(37, 37, 36));
-    cursor: pointer;
-    margin-left: 20px;
     transition: transform 0.3s ease;
 }
 
@@ -205,46 +191,19 @@ header {
     transform: scale(1.05);
 }
 
-#projeto1.diminuir:hover {
-    transform: scale(2);
-}
+/* FOOTER */
 
-.nomeProjetos {
-    width: 90vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2vw;
-    font-family: "Protest Riot", sans-serif;
-    font-weight: 400;
-}
-
-#jornalistico {
-    margin: 50px;
-    position: relative;
-    right: 180px;
-    top: 200px;
-}
-
-#cadastro {
-    position: relative;
-    left: 300px;
-    top: 200px;
-}
-
-/* FOOTER DO SITE*/
 #contatos {
-    height: 100px;
     background-color: #145A82;
-    align-content: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* GITHUB */
-.btn-github {
+#contatos button {
     cursor: pointer;
     gap: 0.5rem;
     border: none;
@@ -255,108 +214,39 @@ header {
     font-size: 0.825rem;
     line-height: 1rem;
     background-color: rgba(0, 0, 0, 0.4);
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
     color: #fff;
 }
 
-.btn-github:hover {
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0),
-        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
-    color: #000000;
+.btn-github:hover{
     transform: translate(0, -0.25rem);
-    background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* INSTAGRAM */
-.btn-instagram {
-    cursor: pointer;
-    gap: 0.5rem;
-    border: none;
-
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 100px;
-    font-weight: 800;
-
-    padding: 0.75rem 1rem;
-    font-size: 0.825rem;
-    line-height: 1rem;
-
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-    color: #fff;
-}
-
-.btn-instagram:hover {
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0),
-        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
-    color: #cabe0f;
+.btn-instagram:hover{
     transform: translate(0, -0.25rem);
-    background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* LINKEDIN */
-.btn-linkedin {
-    cursor: pointer;
-    gap: 0.5rem;
-    border: none;
-
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 100px;
-    font-weight: 800;
-
-    padding: 0.75rem 1rem;
-    font-size: 0.825rem;
-    line-height: 1rem;
-
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-    color: #fff;
-}
-
-.btn-linkedin:hover {
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0),
-        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
-    color: #0051ff;
+.btn-linkedin:hover{
     transform: translate(0, -0.25rem);
-    background-color: rgba(0, 0, 0, 0.5);
 }
-
-/* GMAIL */
-.btn-gmail {
-    cursor: pointer;
-    gap: 0.5rem;
-    border: none;
-
-    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border-radius: 100px;
-    font-weight: 800;
-
-
-    padding: 0.75rem 1rem;
-    font-size: 0.825rem;
-    line-height: 1rem;
-
-    background-color: rgba(0, 0, 0, 0.4);
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.04),
-        inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-    color: #fff;
-}
-
-.btn-gmail:hover {
-    box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0),
-        inset 0 0 0 1px rgba(252, 232, 3, 0.08);
-    color: #ff0000;
+.btn-gmail:hover{
     transform: translate(0, -0.25rem);
-    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+    .fraseApresentativa { font-size: 2rem; }
+    .textoPrincipal { font-size: 1.3rem; }
+    #home { flex-direction: column; gap: 30px; }
+}
+
+@media screen and (max-width: 768px) {
+    header { flex-direction: column; gap: 10px; }
+    .navbar { font-size: 1rem; padding: 0.5rem 0.8rem; margin-left: 5px; }
+    .fraseApresentativa { font-size: 1.5rem; }
+    .imagemPrincipal { width: 250px; height: 250px;}
+    .textoPrincipal { font-size: 1.1rem; padding: 15px; }
+}
+
+@media screen and (max-width: 480px) {
+    .nomeProjetos { flex-direction: column; gap: 15px; }
+    .imagemProjeto { grid-template-columns: 1fr; }
+    .textoPrincipal { font-size: 1rem; }
 }
