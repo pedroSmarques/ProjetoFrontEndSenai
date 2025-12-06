@@ -99,7 +99,7 @@ header {
 
     .imagemPrincipal {
         margin-left: 0;
-        margin-top: 20px;
+        margin-top: 10px;
         width: 250px;
         height: 250px;
     }
@@ -239,7 +239,7 @@ header {
 
 @media screen and (max-width: 768px) {
     header { flex-direction: column; gap: 10px; }
-    .navbar { font-size: 1rem; padding: 0.5rem 0.8rem; margin-left: 5px; }
+    .navbar { font-size: 1rem; padding: 0.1rem 0.8rem; margin-left: 5px; }
     .fraseApresentativa { font-size: 1.5rem; }
     .imagemPrincipal { width: 250px; height: 250px;}
     .textoPrincipal { font-size: 1.1rem; padding: 15px; }
@@ -249,4 +249,11 @@ header {
     .nomeProjetos { flex-direction: column; gap: 15px; }
     .imagemProjeto { grid-template-columns: 1fr; }
     .textoPrincipal { font-size: 1rem; }
+}
+@media screen and (max-width: 406px) {
+    .nomeProjetos { flex-direction: column; gap: 10px; }
+    .imagemProjeto { grid-template-columns: 1fr; }
+    .textoPrincipal { font-size: 1rem; }
+    .autor {font-size: 1rem;}
+    .navbar{ font-size: 1rem;padding: 0.3rem 0.2rem; margin-left: 10px;}
 }
